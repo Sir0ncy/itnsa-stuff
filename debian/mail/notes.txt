@@ -1,0 +1,7 @@
+# CREATE VIRTUAL MAIL FOLDER
+
+mkdir -p /var/vmail/
+groupadd -g 5000 vmail
+useradd --gid 5000 --uid 5000 -d /var/vmail/ -s /sbin/nologin vmail
+chown vmail:vmail /var/vmail/
+chmod 777 /var/vmail/

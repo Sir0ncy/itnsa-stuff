@@ -1,0 +1,14 @@
+# Search all users in ou=mail
+ldapsearch -x -H ldap://int-srv.lks2026.diy \
+  -b "ou=mail,dc=lks2026,dc=diy" \
+  "(objectClass=posixAccount)" uid
+
+# Search specific user
+ldapsearch -x -H ldap://int-srv.lks2026.diy \
+  -b "ou=mail,dc=lks2026,dc=diy" \
+  "(uid=mail1)" dn homeDirectory
+
+# Test LDAP bind (verify password)
+ldapwhoami -x -H ldap://int-srv.lks2026.diy \
+  -D "uid=mail1,ou=mail,dc=lks2026,dc=diy" \
+  -w "Skills39"

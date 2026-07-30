@@ -1,0 +1,22 @@
+# Check if user exists in LDAP via postfix
+postmap -q mail1 ldap:/etc/postfix/ldap-users.cf
+
+# Check if mailbox path is returned correctly
+postmap -q mail1 ldap:/etc/postfix/ldap-mailbox.cf
+
+# Check active postfix configuration
+postconf | grep virtual
+postconf | grep mynetworks
+postconf | grep sasl
+
+# Check mail queue
+postqueue -p
+
+# Flush mail queue (retry stuck emails)
+postqueue -f
+
+# Delete all queued emails
+postsuper -d ALL
+
+# Reload postfix config
+postfix reload

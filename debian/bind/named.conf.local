@@ -1,0 +1,18 @@
+//
+// Do any local configuration here
+//
+
+zone "itnsa.id" {
+	type master;
+	file "/etc/bind/zone.itnsa";
+};
+
+zone "67.168.192.in-addr.arpa" {
+	type master;
+	file "/etc/bind/zone.192";
+};
+
+zone "0.0.10.in-addr.arpa" {
+	type master;
+	file "/etc/bind/zone.10";
+};

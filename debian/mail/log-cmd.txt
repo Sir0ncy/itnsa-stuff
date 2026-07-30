@@ -1,0 +1,25 @@
+# Watch all mail logs live
+tail -f /var/log/mail.log
+
+# Watch only errors
+tail -f /var/log/mail.log | grep -i "error\|fail\|reject"
+
+# Check recent postfix logs
+journalctl -u postfix --since "10 minutes ago"
+
+# Check recent dovecot logs
+journalctl -u dovecot --since "10 minutes ago"
+
+# Check dovecot auth failures only
+journalctl -u dovecot --since "10 minutes ago" | grep -i "fail\|error"
+
+# Check nginx roundcube errors
+tail -f /var/log/nginx/roundcube_error.log
+
+# Check roundcube application errors
+tail -f /var/log/roundcube/errors.log
+
+# Watch all logs simultaneously
+tail -f /var/log/mail.log \
+       /var/log/nginx/roundcube_error.log \
+       /var/log/roundcube/errors.log

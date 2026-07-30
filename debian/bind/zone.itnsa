@@ -1,0 +1,13 @@
+$TTL 1d ;
+@	IN	SOA ns.itnsa.id. admin.itnsa.id. ( 202607291 3h 15m 3w 3h)
+
+@	IN	NS	ns.itnsa.id.
+@	IN	MX 10	mail.itnsa.id.
+
+@	IN	A	10.0.0.1
+vpn	IN	A	10.0.0.1
+web	IN	A	10.0.0.1
+mail	IN	A	10.0.0.2
+dmz	IN	A	10.0.0.2
+ns	IN	A	192.168.67.2
+ldap	IN	A 	192.168.67.2

@@ -1,0 +1,8 @@
+# Add OU from file
+ldapadd -x -W -D "cn=admin,dc=itnsa,dc=id" -f ou.ldif
+
+# Add user using ldapscripts
+for i in {1..5}; do ldapadduser kyw$i mail; done
+
+# Set hashed password user using ldapscripts
+for i in {1..5}; do ldapsetpasswd kyw$i "$(slappasswd -s Skills39)"; done

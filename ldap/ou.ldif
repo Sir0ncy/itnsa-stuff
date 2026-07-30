@@ -1,0 +1,14 @@
+# Mail
+dn: ou=mail,dc=itnsa,dc=id
+ou: mail
+objectClass: top
+objectClass: organizationalUnit
+description: Mail OU
+
+# VPN
+dn: ou=vpn,dc=itnsa,dc=id
+ou: vpn
+objectClass: top
+objectClass: organizationalUnit
+description: VPN OU
+

@@ -1,0 +1,6 @@
+$TTL 1d
+@	IN	SOA ns.itnsa.id. admin.itnsa.id. ( 202607291 3h 15m 3w 3h)
+
+@	IN	NS	ns.itnsa.id.
+2	IN	PTR	ns.itnsa.id.
+2	IN	PTR	ldap.itnsa.id.

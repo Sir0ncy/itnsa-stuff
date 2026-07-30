@@ -1,0 +1,6 @@
+server_host = ldap://int-srv.itnsa.id
+search_base = ou=Employees,dc=itnsa,dc=id
+query_filter = (mail=%s)
+result_attribute = uid
+result_format = /var/vmail/%s/Maildir/
+bind = no

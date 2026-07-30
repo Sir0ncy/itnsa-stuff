@@ -1,0 +1,5 @@
+server_host = ldap://ldap.lks2026.diy
+search_base = ou=mail,dc=lks2026,dc=diy
+query_filter = (uid=%s)
+result_attribute = uid
+bind = no

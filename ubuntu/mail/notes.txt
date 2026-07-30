@@ -1,0 +1,4 @@
+# CREATE VIRTUAL MAIL FOLDER
+mkdir -p /var/mail/virtual
+chown 1000:1000 /var/mail/virtual
+chmod 777 /var/mail/virtual

@@ -1,0 +1,22 @@
+# Check if user can authenticate (passdb)
+doveadm auth test mail1 Skills39
+
+# Check userdb lookup
+doveadm user mail1
+
+# Check all active dovecot config (no comments)
+doveconf -n
+
+# Check active passdb and userdb
+doveconf -n | grep -A5 "passdb\|userdb"
+
+# List all connected IMAP sessions
+doveadm who
+
+# Force logout a user
+doveadm kick mail1
+
+# Check mail count for a user
+doveadm mailbox status -u mail1 messages INBOX
+
+# List mailboxes for a user
