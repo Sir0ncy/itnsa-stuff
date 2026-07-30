@@ -1,0 +1,1 @@
+### Just storing some stuff about notes, tutor, and configuration files about LKS ITNSA :)
